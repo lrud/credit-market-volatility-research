@@ -6,7 +6,7 @@ This repository contains the code and data (where publicly available) for a rese
 
 ## Motivation
 
-The complex, jump-prone dynamics of asset return volatility are critical for risk management, asset pricing, and forecasting, often challenging traditional models and highlighting the importance of understanding sudden volatility changes. This study draws inspiration from Caporin, Rossi, and Santucci de Magistris (2016), who demonstrated with their HAR-Volatility-Jump model that credit risk indicators can predict volatility jumps identified using high-frequency data. This paper investigates how credit market stress, proxied by the BAA-AAA corporate bond spread, impacts the volatility of both a digital asset (Bitcoin) and a traditional one (NASDAQ). We hypothesize that higher credit spreads increase subsequent asset volatility $(H_{a}:\beta_{1}>0)$, and further, that Bitcoin exhibits greater sensitivity to such stress than NASDAQ.
+The complex, jump-prone dynamics of asset return volatility are critical for risk management, asset pricing, and forecasting, often challenging traditional models and highlighting the importance of understanding sudden volatility changes. This study draws inspiration from Caporin, Rossi, and Santucci de Magistris (2016), who demonstrated with their HAR-Volatility-Jump model that credit risk indicators can predict volatility jumps identified using high-frequency data. This paper investigates how credit market stress, proxied by the BAA-AAA corporate bond spread, impacts the volatility of both a digital asset (Bitcoin) and a traditional one (NASDAQ). We hypothesize that higher credit spreads increase subsequent asset volatility (Ha: beta1 > 0), and further, that Bitcoin exhibits greater sensitivity to such stress than NASDAQ.
 
 ## Data
 
@@ -36,7 +36,7 @@ This study uses a panel data approach with daily observations for Bitcoin and NA
 
 **Econometric Models:**
 
-* **Baseline Model: Pooled Ordinary Least Squares (OLS):** While initially considering fixed-effects, diagnostic tests on the panel data guided the selection of Pooled Ordinary Least Squares (OLS) as the more statistically appropriate baseline estimator. Both the Breusch-Pagan LM test $(Prob>chibar2=1.0000$, favoring Pooled OLS over Random Effects) and an F-test for fixed effects $(Prob>F=0.2002)$ suggested that distinct, time-invariant asset-specific effects were not dominant after controlling for the included regressors.
+* **Baseline Model: Pooled Ordinary Least Squares (OLS):** While initially considering fixed-effects, diagnostic tests on the panel data guided the selection of Pooled Ordinary Least Squares (OLS) as the more statistically appropriate baseline estimator. Both the Breusch-Pagan LM test (Prob > chibar2 = 1.0000, favoring Pooled OLS over Random Effects) and an F-test for fixed effects (Prob > F = 0.2002) suggested that distinct, time-invariant asset-specific effects were not dominant after controlling for the included regressors.
     ![Table: Pooled OLS Regression](output/tables/Pooled OLS.png)
 
 * **Primary Innovation: Asset-Specific Quantile Regression:** To explore complex, heterogeneous impacts of explanatory factors on log volatility beyond the average effects captured by OLS, this study employs quantile regression as its innovative analytical step. This approach allows modeling how predictors affect different parts (quantiles) of the conditional log volatility distribution, estimated separately for Bitcoin and NASDAQ using simultaneous quantile regression for the 25th, 50th (median), and 75th percentiles of conditional log volatility. This nonlinear approach, extending traditional Ordinary Least Squares (OLS) analysis, seeks a more nuanced understanding of risk transmission and volatility dynamics in diverse financial markets.
@@ -62,7 +62,7 @@ Asset-specific quantile regressions reveal that the impacts of financial indicat
     ![Impact of Lagged Negative Log Returns (Leverage)](output/figures/py_plot_L_neg_log_ret.png)
 
 ## Repository Structure
-
+```text
 credit-market-volatility-research/
 ├── README.md               # This file
 ├── LICENSE                 # Project license
@@ -79,7 +79,7 @@ credit-market-volatility-research/
 ├── output/
 │   ├── tables/             # Generated LaTeX tables (e.g., descriptive stats, regressions) and their PNG images
 │   └── figures/            # Generated PNG and PDF plots
-
+```
 ## How to Reproduce the Analysis
 
 To reproduce the results and figures in this study:
@@ -116,4 +116,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## References
 
-[1] Caporin, M., Rossi, E., & Santucci de Magistris, P. (2016). Volatility jumps and their economic determinants. *Journal of Financial Econometrics*, 14(1), 29-80. DOI: 10.1093/jjfinec/nbu028.
+[1] Caporin, M., Rossi, E., & Santucci de Magistris, P. (2016). Volatility jumps and their economic determinants. Journal of Financial Econometrics, 14(1), 29-80. DOI: 10.1093/jjfinec/nbu028.
