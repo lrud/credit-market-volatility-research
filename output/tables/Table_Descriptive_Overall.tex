@@ -1,0 +1,26 @@
+% Content for TABLES/Table_Descriptive_Overall.tex
+% Formatted with threeparttable for notes constrained to table width.
+
+\begin{threeparttable}
+    \footnotesize % Apply footnotesize to the entire threeparttable (table and notes)
+    % \caption{Overall Descriptive Statistics of Key Variables} % Retain caption if used in main doc
+    \setlength{\tabcolsep}{3pt} % Reduce space between columns for this table
+
+    \begin{tabular}{@{\extracolsep{\fill}}l r r r r r@{\extracolsep{\fill}}}
+    \toprule
+    Variable                        & Obs   & Mean    & Std. Dev. & Min      & Max      \\
+    \midrule
+    Log Volatility (20-day)       & 1,144 & -1.2077 & 0.5797    & -2.8033  &  0.2115  \\
+    L. Baa-Aaa Spread             & 1,144 &  0.8561 & 0.1959    &  0.5800  &  1.2300  \\
+    L. Treasury Spread (10Y-3M)   & 1,144 &  0.0603 & 1.1621    & -1.7300  &  2.2100  \\
+    L. Implied Volatility         & 1,144 & 44.8203 & 24.8807   & 11.2000  & 139.9800 \\
+    L. Negative Log Return        & 1,144 & -0.0086 & 0.0161    & -0.1549  &  0.0000  \\
+    \bottomrule
+    \end{tabular}
+
+    \begin{tablenotes}[para,flushleft]
+        \item \textit{Note:} Statistics are for the 1,144 observations used in regression analysis. `L.` denotes a one-period lag.
+    \end{tablenotes}
+\end{threeparttable}
+% \setlength{\tabcolsep}{6pt} % Restore default tabcolsep globally if changed from default for this table only
+                                % This should be done outside this input file, in the main document, if necessary.

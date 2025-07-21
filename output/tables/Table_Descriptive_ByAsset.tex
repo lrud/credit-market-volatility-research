@@ -1,0 +1,32 @@
+% Content for TABLES/Table_Descriptive_ByAsset.tex
+% Formatted with threeparttable for notes constrained to table width.
+
+\begin{threeparttable}
+    \footnotesize % Apply footnotesize to the entire threeparttable (table and notes)
+    % \caption{Descriptive Statistics by Asset} % Example if caption is here
+    % \setlength{\tabcolsep}{<value>} % Adjust if needed for this specific table
+
+    \begin{tabular}{ll r r r r r}
+    \toprule
+    Asset   & Variable                  & N       & Mean    & Std. Dev. & Min     & Max     \\
+    \midrule
+    Bitcoin & Log Volatility (20-day) & 1,007   & -0.794  & 0.393     & -2.279  & 0.231   \\
+            & L. Implied Volatility     &   787   & 65.954  & 18.040    & 32.740  & 139.980 \\
+            & L. Negative Log Return    &   572   & -0.012  & 0.020     & -0.155  & 0.000   \\
+    \addlinespace
+    NASDAQ  & Log Volatility (20-day) & 1,007   & -1.628  & 0.428     & -2.992  & -0.311  \\
+            & L. Implied Volatility     &   787   & 23.897  & 5.818     & 11.200  & 41.430  \\
+            & L. Negative Log Return    &   572   & -0.005  & 0.009     & -0.057  & 0.000   \\
+    \midrule
+    Total   & Log Volatility (20-day) & 2,014   & -1.211  & 0.585     & -2.992  & 0.231   \\
+    (Pooled)& L. Implied Volatility     & 1,574   & 44.925  & 24.940    & 11.200  & 139.980 \\
+            & L. Negative Log Return    & 1,144   & -0.009  & 0.016     & -0.155  & 0.000   \\
+    \bottomrule
+    \end{tabular}
+
+    \begin{tablenotes}[para,flushleft]
+        \item \textit{Note:} `L.` denotes a one-period lag. N for each variable by asset reflects available observations. Total statistics for L. Negative Log Return reflect the regression sample count.
+    \end{tablenotes}
+\end{threeparttable}
+% \setlength{\tabcolsep}{6pt} % Restore default tabcolsep globally if changed from default for this table only
+                            % This should be done outside this input file, in the main document, if necessary.

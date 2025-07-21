@@ -1,0 +1,44 @@
+{ % Start of the scope for local settings like \tabcolsep
+    \centering % Center the table and its notes
+    \begin{threeparttable}
+        \footnotesize % Apply footnotesize to the entire threeparttable (table and notes)
+        \setlength{\tabcolsep}{3pt} % Reduce space between columns for this table
+
+        % If you have a caption, it would ideally go here, e.g.:
+        % \caption{Quantile Regression Results for NASDAQ}
+        % \label{tab:quantile_nasdaq_results_updated}
+
+        \begin{tabular}{@{\extracolsep{\fill}}l r r r@{\extracolsep{\fill}}}
+        \toprule
+                                        & \multicolumn{1}{c}{Q25 (NASDAQ)} & \multicolumn{1}{c}{Q50 (NASDAQ)} & \multicolumn{1}{c}{Q75 (NASDAQ)} \\
+        Variable                        & \multicolumn{1}{c}{Coef. (SE)} & \multicolumn{1}{c}{Coef. (SE)} & \multicolumn{1}{c}{Coef. (SE)} \\
+        \midrule
+        L\_baa\_aaa\_spread             & 0.046                     & -0.175\textsuperscript{*}  & -0.225\textsuperscript{**} \\
+                                        & (0.172)                   & (0.104)                   & (0.091)                   \\
+        \addlinespace
+        L\_treasury\_10y\_3m\_spread   & -0.115\textsuperscript{***}& -0.095\textsuperscript{***}& -0.058\textsuperscript{**} \\
+                                        & (0.028)                   & (0.021)                   & (0.025)                   \\
+        \addlinespace
+        L\_implied\_vol                & 0.065\textsuperscript{***} & 0.065\textsuperscript{***} & 0.056\textsuperscript{***} \\
+                                        & (0.005)                   & (0.003)                   & (0.005)                   \\
+        \addlinespace
+        L\_neg\_log\_ret                & -1.649                    & -2.693\textsuperscript{*}  & -0.675                    \\
+                                        & (2.171)                   & (1.587)                   & (1.096)                   \\
+        \addlinespace
+        Constant                        & -3.411\textsuperscript{***}& -3.032\textsuperscript{***}& -2.568\textsuperscript{***} \\
+                                        & (0.098)                   & (0.092)                   & (0.071)                   \\
+        \midrule
+        Observations                    & \multicolumn{1}{r}{572} & \multicolumn{1}{r}{572} & \multicolumn{1}{r}{572} \\
+        Pseudo R-sq (Q25)               & \multicolumn{1}{r}{0.381} &                           &                           \\
+        Pseudo R-sq (Q50)               &                           & \multicolumn{1}{r}{0.367} &                           \\
+        Pseudo R-sq (Q75)               &                           &                           & \multicolumn{1}{r}{0.403} \\
+        \bottomrule
+        \end{tabular}
+
+        \begin{tablenotes}[para,flushleft] % Use [para] for a paragraph-style note block
+                                            % [flushleft] to align the note block to the left
+            \item \textit{Note:} \textsuperscript{***} \(p<0.001\), \textsuperscript{**} \(p<0.05\), \textsuperscript{*} \(p<0.10\). Bootstrap standard errors (reps 50) in parentheses. `L.` denotes one-period lagged variables.
+        \end{tablenotes}
+    \end{threeparttable}
+    \setlength{\tabcolsep}{6pt} % Restore default tabcolsep outside the scope if this table was unique
+} % End scope

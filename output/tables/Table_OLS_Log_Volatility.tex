@@ -1,0 +1,31 @@
+{ % Start of the scope for font size and other local settings
+    \centering % Center the table and its notes
+    \begin{threeparttable}
+        \footnotesize % Apply footnotesize to the entire threeparttable (table and notes)
+        \setlength{\tabcolsep}{3pt} % Reduce space between columns for this table
+
+        % If you have a caption for this table, it would ideally go here, e.g.:
+        \label{tab:ols_log_volatility_results_updated}
+
+        \begin{tabular}{@{\extracolsep{\fill}}l r r r r r@{\extracolsep{\fill}}}
+        \toprule
+        Variable                        & \multicolumn{1}{c}{Coefficient} & \multicolumn{1}{c}{Std. Err.} & \multicolumn{1}{c}{z} & \multicolumn{1}{c}{P$>$$|$z$|$} & \multicolumn{1}{c}{[95\% Conf. Interval]} \\
+        \midrule
+        L\_baa\_aaa\_spread             & 0.268\textsuperscript{***} & 0.052 & 5.18  & 0.000 & 0.166 \ -- \ 0.369 \\
+        L\_treasury\_10y\_3m\_spread    & -0.013                     & 0.009 & -1.37 & 0.172 & -0.031 \ -- \ 0.005 \\
+        L\_implied\_vol                 & 0.019\textsuperscript{***} & 0.000 & 45.79 & 0.000 & 0.018 \ -- \ 0.020 \\
+        L\_neg\_log\_ret                 & -2.569\textsuperscript{***}& 0.613 & -4.19 & 0.000 & -3.771 \ -- \ -1.366 \\
+        Constant                        & -2.314\textsuperscript{***}& 0.048 & -48.50& 0.000 & -2.408 \ -- \ -2.221 \\
+        \midrule
+        Observations                    & \multicolumn{5}{l}{1,144} \\
+        Overall R-squared               & \multicolumn{5}{l}{0.698} \\
+        Wald $\chi^2$(4)                & \multicolumn{5}{l}{2632.86\textsuperscript{***}} \\
+        \bottomrule
+        \end{tabular}
+
+        \begin{tablenotes}[para,flushleft] % Use [para] for a paragraph-style note block
+            \item \textit{Note:} \textsuperscript{***} \(p<0.001\), \textsuperscript{**} \(p<0.05\), \textsuperscript{*} \(p<0.10\). Standard errors from `xtreg, re` (GLS) in parentheses for coefficients if shown, here reported in a separate column. `L.` denotes one-period lagged variables. Confidence interval presented as [Lower Bound -- Upper Bound].
+        \end{tablenotes}
+    \end{threeparttable}
+    \setlength{\tabcolsep}{6pt} % Restore default tabcolsep outside the scope if this table was unique
+} % End scope

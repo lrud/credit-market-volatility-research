@@ -1,0 +1,41 @@
+% Content for TABLES/Table_Descriptive_Panel.tex
+% Formatted with threeparttable for notes constrained to table width.
+
+\begin{threeparttable}
+    \footnotesize % Apply footnotesize to the entire threeparttable (table and notes)
+    \setlength{\tabcolsep}{3pt} % Reduce space between columns for this table
+    % \caption{Panel Data Summary Statistics (xtsum)} % Example if caption is here
+
+    \begin{tabular}{@{\extracolsep{\fill}}l l r r r r r@{\extracolsep{\fill}}}
+    \toprule
+    Variable                     & Dimension & Mean    & Std. Dev. & Min      & Max      & Observations \\
+    \midrule
+    Log Volatility (20-day)      & Overall   & -1.2110 & 0.5850    & -2.9921  &  0.2309  & N = 2014     \\
+                                 & Between   &         & 0.5891    & -1.6275  & -0.7945  & n = 2        \\
+                                 & Within    &         & 0.4107    & -2.6955  &  0.1055  & T-bar = 1007 \\
+    \addlinespace
+    L. Baa-Aaa Spread            & Overall   &  0.8551 & 0.1967    &  0.5800  &  1.2300  & N = 1574     \\
+                                 & Between   &         & 0.0000    &  0.8551  &  0.8551  & n = 2        \\
+                                 & Within    &         & 0.1967    &  0.5800  &  1.2300  & T-bar = 787  \\
+    \addlinespace
+    L. Treasury Spread (10Y-3M)  & Overall   &  0.0589 & 1.1569    & -1.7300  &  2.2100  & N = 1574     \\
+                                 & Between   &         & 0.0000    &  0.0589  &  0.0589  & n = 2        \\
+                                 & Within    &         & 1.1569    & -1.7300  &  2.2100  & T-bar = 787  \\
+    \addlinespace
+    L. Implied Volatility        & Overall   & 44.9255 & 24.9404   & 11.2000  & 139.9800 & N = 1574     \\
+                                 & Between   &         & 29.7391   & 23.8968  & 65.9542  & n = 2        \\
+                                 & Within    &         & 13.3991   & 11.7113  & 118.9513 & T-bar = 787  \\
+    \addlinespace
+    L. Negative Log Return       & Overall   & -0.0086 & 0.0161    & -0.1549  &  0.0000  & N = 1144     \\
+                                 & Between   &         & 0.0047    & -0.0119  & -0.0053  & n = 2        \\
+                                 & Within    &         & 0.0157    & -0.1516  &  0.0033  & T-bar = 572  \\
+    \bottomrule
+    \end{tabular}
+
+    \begin{tablenotes}[para,flushleft]
+        \item \textit{Note:} `L.` denotes a one-period lag. N denotes total observations, n denotes number of panels (assets), T-bar denotes average observations per panel.
+    \end{tablenotes}
+\end{threeparttable}
+% \setlength{\tabcolsep}{6pt} % Restore default tabcolsep globally if changed from default for this table only
+% \normalsize % Restore font size globally if changed from default for this table only
+             % These restorations should ideally be handled outside this input file, in the main document.
