@@ -15,13 +15,13 @@ This study uses daily data (March 23, 2021 April 9, 2025) for Bitcoin (BTC) pric
 ### Descriptive Statistics
 
 Overall descriptive statistics of key variables used in the regression analysis:
-![Table: Stats of Key Variables](output/tables/Stats of Key Variables.png)
+![Stats of Key Variables](output/tables/Stats%20of%20Key%20Variables.png)
 
 Descriptive statistics by individual asset, highlighting notable distinctions:
-![Table: Stats by Asset](output/tables/Stats by Asset.png)
+![Stats by Asset](output/tables/Stats%20by%20Asset.png)
 
 Panel data summary statistics, revealing inherent differences in average volatility levels and variability of factors:
-![Table: Panel Data](output/tables/Panel Data.png)
+![Panel Data](output/tables/Panel%20Data.png)
 
 ## Methodology
 
