@@ -62,12 +62,12 @@ Asset-specific quantile regressions reveal that the impacts of financial indicat
     ![Impact of Lagged Negative Log Returns (Leverage)](output/figures/py_plot_L_neg_log_ret.png)
 
 ## Repository Structure
-```text
 credit-market-volatility-research/
-├── README.md               # This file
-├── LICENSE                 # Project license
+├── README.md               
 ├── paper/
-│   └── 722_final.pdf       # The final research paper
+│   └── FINAL.pdf       # The final research paper
+├── data/
+│   └── bitcoin_dataset_clean.csv # Cleaned and processed dataset 
 ├── code/
 │   ├── stata/
 │   │   ├── 01_data_prep_and_regressions.do # Stata script for data prep, diagnostics, OLS & QR
@@ -77,7 +77,6 @@ credit-market-volatility-research/
 ├── output/
 │   ├── tables/             # Generated LaTeX tables (e.g., descriptive stats, regressions) and their PNG images
 │   └── figures/            # Generated PNG and PDF plots
-```
 ## How to Reproduce the Analysis
 
 To reproduce the results and figures in this study:
@@ -96,7 +95,6 @@ To reproduce the results and figures in this study:
     cd credit-market-volatility-research
     ```
 2.  **Obtain Data:**
-    * If `data/bitcoin_dataset_clean.csv` is included in this repository, proceed.
     * If not, you will need to source daily Bitcoin and NASDAQ prices (Yahoo Finance), DVOL (Deribit), VXN, Baa-Aaa spread, and 10Y-3M Treasury spread (FRED) for the period March 23, 2021 - April 9, 2025, and save them as `bitcoin_dataset_clean.csv` in the `data/` directory.
 3.  **Run Stata Scripts:**
     * Open Stata.
@@ -108,9 +106,6 @@ To reproduce the results and figures in this study:
     * Run the script: `python generate_plots.py`
     * This will generate the coefficient plots (PNG and PDF formats) and save them in `output/figures/`.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## References
 
