@@ -37,13 +37,13 @@ This study uses a panel data approach with daily observations for Bitcoin and NA
 **Econometric Models:**
 
 * **Baseline Model: Pooled Ordinary Least Squares (OLS):** While initially considering fixed-effects, diagnostic tests on the panel data guided the selection of Pooled Ordinary Least Squares (OLS) as the more statistically appropriate baseline estimator. Both the Breusch-Pagan LM test (Prob > chibar2 = 1.0000, favoring Pooled OLS over Random Effects) and an F-test for fixed effects (Prob > F = 0.2002) suggested that distinct, time-invariant asset-specific effects were not dominant after controlling for the included regressors.
-    ![Table: Pooled OLS Regression](output/tables/Pooled OLS.png)
+    ![Table: Pooled OLS Regression of Log Volatility](output/tables/Pooled OLS.png)
 
 * **Primary Innovation: Asset-Specific Quantile Regression:** To explore complex, heterogeneous impacts of explanatory factors on log volatility beyond the average effects captured by OLS, this study employs quantile regression as its innovative analytical step. This approach allows modeling how predictors affect different parts (quantiles) of the conditional log volatility distribution, estimated separately for Bitcoin and NASDAQ using simultaneous quantile regression for the 25th, 50th (median), and 75th percentiles of conditional log volatility. This nonlinear approach, extending traditional Ordinary Least Squares (OLS) analysis, seeks a more nuanced understanding of risk transmission and volatility dynamics in diverse financial markets.
     * **Bitcoin Quantile Regression Results:**
-        ![Table: Quintile Regression Bitcoin](output/tables/Quintile Regression Bitcoin.png)
+        ![Table: Quantile Regression of Log Volatility for Bitcoin](output/tables/Quintile Regression Bitcoin.png)
     * **NASDAQ Quantile Regression Results:**
-        ![Table: Quintile Regression Nasdaq](output/tables/Quintile Regression Nasdaq.png)
+        ![Table: Quantile Regression of Log Volatility for Nasdaq](output/tables/Quintile Regression Nasdaq.png)
 
 ## Key Findings (Visualized)
 
@@ -68,8 +68,6 @@ credit-market-volatility-research/
 ├── LICENSE                 # Project license
 ├── paper/
 │   └── 722_final.pdf       # The final research paper
-├── data/
-│   └── bitcoin_dataset_clean.csv # Cleaned and processed dataset (if shareable)
 ├── code/
 │   ├── stata/
 │   │   ├── 01_data_prep_and_regressions.do # Stata script for data prep, diagnostics, OLS & QR
