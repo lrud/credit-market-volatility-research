@@ -41,9 +41,9 @@ This study uses a panel data approach with daily observations for Bitcoin and NA
 
 * **Primary Innovation: Asset-Specific Quantile Regression:** To explore complex, heterogeneous impacts of explanatory factors on log volatility beyond the average effects captured by OLS, this study employs quantile regression as its innovative analytical step. This approach allows modeling how predictors affect different parts (quantiles) of the conditional log volatility distribution, estimated separately for Bitcoin and NASDAQ using simultaneous quantile regression for the 25th, 50th (median), and 75th percentiles of conditional log volatility. This nonlinear approach, extending traditional Ordinary Least Squares (OLS) analysis, seeks a more nuanced understanding of risk transmission and volatility dynamics in diverse financial markets.
     * **Bitcoin Quantile Regression Results:**
-        ![Table: Quantile Regression of Log Volatility for Bitcoin](output/tables/Quintile Regression Bitcoin.png)
+        ![Table: Quantile Regression of Log Volatility for Bitcoin](output/tables/Quintile_Regression_Bitcoin.png)
     * **NASDAQ Quantile Regression Results:**
-        ![Table: Quantile Regression of Log Volatility for Nasdaq](output/tables/Quintile Regression Nasdaq.png)
+        ![Table: Quantile Regression of Log Volatility for Nasdaq](output/tables/Quintile_Regression_Nasdaq.png)
 
 ## Key Findings (Visualized)
 
