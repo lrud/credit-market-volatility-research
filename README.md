@@ -62,6 +62,7 @@ Asset-specific quantile regressions reveal that the impacts of financial indicat
     ![Impact of Lagged Negative Log Returns (Leverage)](output/figures/py_plot_L_neg_log_ret.png)
 
 ## Repository Structure
+```text
 credit-market-volatility-research/
 ├── README.md               
 ├── paper/
@@ -77,6 +78,7 @@ credit-market-volatility-research/
 ├── output/
 │   ├── tables/             # Generated LaTeX tables (e.g., descriptive stats, regressions) and their PNG images
 │   └── figures/            # Generated PNG and PDF plots
+```
 ## How to Reproduce the Analysis
 
 To reproduce the results and figures in this study:
